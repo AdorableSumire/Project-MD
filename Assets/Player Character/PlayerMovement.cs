@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour{
 
-    public float isTrue = 0;
+    private Vector2 _
 
     public float speed;
     public Rigidbody2D body;
