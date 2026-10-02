@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour{
     // Update is called once per frame
     private void Update()
     {
-        _input = Vector2.ClampMagnitude(_moveAction.action.ReadValue<Vecot2>(, 1f);
+        _input = Vector2.ClampMagnitude(_moveAction.action.ReadValue<Vector2>(, 1f);
 
         if (_sprite != null && Mathf.Abs(_input.x) > 0.01f)
         _sprite.flipX = _input.x <0f;
