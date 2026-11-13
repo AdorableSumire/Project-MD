@@ -1,17 +1,16 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
-public class PlayerMovement : MonoBehaviour{
+public class PlayerMovemnt3D : MonoBehaviour
+{
 
     public float movespeed = 5f;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private Vector3 movement;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+
+    void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -24,11 +23,6 @@ public class PlayerMovement : MonoBehaviour{
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement.normalized * movespeed * Time.fixedDeltaTime);
-    }
-
-    float FixedDeltaTimeCalculated()
-    {
-        return Time.fixedDeltaTime;
     }
 
 }
